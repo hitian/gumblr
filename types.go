@@ -78,6 +78,7 @@ type Post struct {
 	Liked       bool     `json:"liked"`        // Indicates if a user has already liked a post or not
 	NoteCount   int      `json:"note_count"`   // Indicates total count of likes, reposts, etc...
 	State       string   `json:"state"`        // Indicates the current state of the post
+	Summary     string   `json:"summary"`      // Post summary text.
 	// Text posts
 	Title string `json:"title,omitempty"` // The optional title of the post
 	Body  string `json:"body,omitempty"`  // The full post body
@@ -125,6 +126,10 @@ type Post struct {
 		Width     int    `json:"width,omitempty"`      // the width of the video player
 		EmbedCode string `json:"embed_code,omitempty"` // HTML for embedding the video player
 	} `json:"player,omitempty"`
+	PermalinkURL    string `json:"permalink_url,omitempty"`    // video permalink_url
+	ThumbnailURL    string `json:"thumbnail_url,omitempty"`    // video thumbnail url
+	ThumbnailWidth  int    `json:"thumbnail_width,omitempty"`  // video thumbnail width
+	ThumbnailHeight int    `json:"thumbnail_height,omitempty"` // video thumbnail height
 	// Answer posts
 	AskingName string `json:"asking_name,omitempty"` // The blog name of the user asking the question
 	AskingURL  string `json:"asking_url,omitempty"`  // The blog URL of the user asking the question
